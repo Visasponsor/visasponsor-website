@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>visasponsor</title>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+	    min-width: 360px;
+	    background-color: #f4f4f4;
+        }
+
+         .logo-image {
+            width: 50px;
+            height: 35px;
+        }
+	
+	.flex {
+            display: flex;
+            align-items: center;
+        }
+         .header, .container1 {
+            width: 100%;
+            color: white;
+            text-align: center;
+        }
+
+        .header {
+            height: 100px;
+	    background-color: #333;
+            color: #fff;
+            display: flex;
+	    font-size: 25px;
+            justify-content: center;
+            position: fixed;
+            top: 0;
+            z-index: 1000; /* Ensure the header is above other elements */
+        }
+
+        .container1 {
+            background-color: #444;
+            height: 40px;
+            position: fixed;
+            top: 100px; /* Adjust this value based on the height of the header */
+            z-index: 1000; /* Ensure the container1 is above other elements */
+        }
+
+        nav {
+            margin: 0 20px;
+	    margin-left: 0; /* Adjust the left margin */
+	    padding: 10px;
+        }
+
+	nav ul {
+    	    padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: flex-start; /* Align items to the left */
+	}
+
+        
+	ul {
+            list-style: none;
+	    margin-left: 0; /* Adjust the left margin */
+            margin: 10px;
+            font-size: 20px;
+        }
+
+        li {
+            margin: 0 10px;
+	    margin-left: 0; /* Adjust the left margin */            
+ 	    cursor: pointer;
+        }
+
+	nav li:last-child {
+    	    margin-left: auto; /* Push the last element to the right */
+	}
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+	
+	footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+	    font-size: 13px;
+        }
+	
+	.top-email {
+	    align-items: right;
+	    right: 10px;
+	    position: absolute;
+	    display: flex;
+	    align-items: center;
+	    font-size: 15px;
+            color: #fff;
+        }
+	
+	.whatsapp-btn {
+            background-color: #4caf50;
+            color: #fff;
+	    width: 100%;
+	    margin-top: 5px;
+	    font-size: 17px;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #45a049;
+        }
+	
+	
+	
+	form {
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 100%;
+        }
+
+        .form-group {
+            width: calc(50% - 5px); /* Two columns with a 20px gap in between */
+	    margin-right: 2px;
+	    margin-left: 2px;
+        }
+
+        .form-group:last-child {
+            margin-left: 5px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+        
+	label {color: #415161;
+            display: block;
+            margin-top: 3px;
+            text-align: left; /* Explicitly set text-align to left */
+            font-weight: bold;
+            font-size: 14px;
+        }
+	
+	section {
+            min-height: 100vh;
+	    margin-top: 170px;
+            background-color: #f4f4f4; /* Change this to the background color you desire */
+        }
+	
+	.flag-container {
+            display: flex;
+	    justify-content: center;
+            align-items: center;
+        }
+
+        .flag {
+	    border-radius: 5px;
+	    justify-content: center;
+            align-items: center;
+	    margin-right: 35px;
+	    height:50px;
+            width: 80px; /* Set the desired width for the flags */
+        }
+
+	.mid-topic {
+       	    font-size: 18px; /* Decrease font size for smaller screens */
+            width: 100%;
+    	    background-color: #333;
+    	    color: #fff;
+    	    align-items: center;
+    	    line-height: 1.5;
+    	    padding-top: 5px;
+    	    padding-bottom: 5px;
+    	    text-align: center;
+    	    margin-right: 0; /* Remove any default margin */
+	}
+
+	.end-page {
+	   max-width: 100%;
+ 	   background-color: #FF8800;
+           color: #000;
+	   align-items: center;
+	   line-height: 1.5;
+	   padding: 5px;
+	   padding-bottom: 5px;
+ 	   text-align: center;
+	}
+
+	.testi-container {
+            width: 80%;
+            margin: 20px auto;
+        }
+        .review {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            padding: 30px;
+            align-items: center;
+            text-align: center;
+        }
+
+	
+
+       
+	.client-city {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .stars {
+            color: #f8d64e;
+            margin-bottom: 10px;
+        }
+
+        .notes {
+            font-size: 16px;
+        }
+
+        .flex {
+            display: flex;
+            align-items: center;
+        }
+
+	.container-partner {
+	    border-radius: 10px;
+    	    background-color: white;
+    	    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	    margin: 30px;
+	    text-align: center;
+	    align-items: center;
+	    height: 600px;
+	    padding: 10px;	
+	}
+
+	.container01 {
+	    border-radius: 10px;
+    	    background-color: white;
+    	    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	    margin: 20px;
+	    text-align: center;
+	    padding: 10px;
+
+	}
+
+	.req-benefits {
+	    max-width: 100%;
+	    padding: 15px;
+ 	    line-height: 1.5;
+	    text-align: left;
+	    align-items: left; /* Added property for alignment */
+	}
+
+	.inquiry-container {
+    	    background-color: #E8E8E8;
+   	    padding: 10px;
+   	    border: 1px solid #929292;
+            border-radius: 5px;
+   	    max-width: 95%;
+  	    margin: 30px auto; /* Updated margin for vertical alignment and centered horizontally */
+ 	    box-sizing: border-box; /* Include padding and border in the total width */
+	}
+	 
+	.faq01 {
+	   max-width: 100%;
+ 	   background-color: #B6E8F3;
+           color: #000;
+	   align-items: center;
+	   line-height: 1.5;
+	   padding: 15px;
+	   padding-bottom: 5px;
+ 	   text-align: center;
+	}
+
+	table {
+       	    max-width: 100%;
+	    width: 100%;
+	    padding: 10px;
+	    margin-bottom: 40px;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #9A9A9A;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .question {
+            cursor: pointer;
+        }
+
+        .answer {
+            display: none;
+        }
+
+        .plus-minus::before {
+            content: '+';
+            display: inline-block;
+            margin-right: 5px;
+        }
+
+        .minus::before {
+            content: '-';
+        }
+        
+        
+
+	.about-us {
+	    box-sizing: border-box;
+	    color: #fff;
+	    padding-top: 20px;
+	    padding-bottom: 20px;
+	    margin: 0;
+	    background-color: #415161;
+	    width: 100%;
+	    text-align: center;
+	}
+
+		
+	.order-button-others {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }       
+
+	.active {
+            background-color: #4CAF50;
+            color: white;
+	    padding: 5px;
+	    border-radius: 5px;
+	    font-size: 23px;
+        }
+
+	.tel p {
+      	    display: none;
+        }
+	
+	.section1 {
+	    max-width: 100%; /* Set the width equal to the viewport width */
+	    align-items: center;
+    	    justify-content: center;
+	}
+
+
+    </style>
+
+</head>
+<body>
+
+  <div class="tel" data-sheetdb-url="https://sheetdb.io/api/v1/g1bvzouuq9ua5">
+       <p>{{contacts}}</p>
+  </div>
+
+  <div class="flex header">
+	<img src="C:\Users\SOLID STATE E\Desktop\GT.png" alt="Logo Image" class="logo-image">
+        <h4><b>Global Travel UK</b></h4>
+  </div>
+
+    <div class="container1 flex">
+        <nav class="flex">
+            
+            <ul class="flex">
+                <li><a href="#" onclick="showSection('home')">Home</a>
+            	<li><a href="#" onclick="showSection('testimonials')">Testimonials</a>
+            	<li><a href="#" onclick="showSection('partner')">Travel Agent</a>
+            </ul>
+
+        </nav>
+    </div>
+
+
+	<section id="home" class="section1"> 
+
+	<div class="mid-topic">
+	<h1>Your Visa Sponsorship Companion Since 2020<br> 10,000 + Visa's Sponsored Already</h1>
+        </div>
+
+	<div class="container01">
+	
+	<h1 style="color: red;">Individual Visa Sponsorship</h1>
+	<p><b>Free Work Visa (5 Years) <span style="color: red;">|</span> Free Ticket <span style="color: red;">|</span> Accomodation</b></p>
+
+	<div class="req-benefits">
+  	<p><b> ✅ No education required (Two month paid training on arrival)<br>✅ No work Exprience Required<br>✅ Males and Females, Ages 18 - 65<br>✅ Salary range $20-$25 per hour<br><br> 
+	<span style="color: green;">Benefit Packages</span><br>✅ Free Accomodation<br>✅ Free work visa, Free Ticket and Free LMIA<br>✅ We handle all the paper work, Start To Finish<br><br></p>
+	<p><span style="color: green;">NB:</span> You will be required to Buy the <br><span style="color: green;">New Hire Documentation (NHD) Forms</span> for $19.<br>That's the only payment you will make in this process.</b></p>  
+	</div>
+
+	<div class="inquiry-container">
+	<h3 style="color: red;"><b>Individual Application Form</b></h3>
+
+	<form action="#" method="post">
+        <div class="form-group">
+            <input type="text" id="name" name="name" placeholder="Name" required oninput="updateNotes(0, 'Name:', this.value)">
+        </div>
+
+
+        <div class="form-group">
+            <input type="email" id="email" name="email" placeholder="Email" required oninput="updateNotes(1, 'Email:', this.value)">
+        </div>
+
+        <div class="form-group">
+            <input type="tel" id="whatsapp" name="whatsapp" placeholder="WhatsApp Number" required oninput="updateNotes(2, 'WhatsApp Number:', this.value)">
+        </div>
+
+        <div class="form-group">
+            <input type="text" id="delivery-address" name="delivery-address" placeholder="Current Country" required oninput="updateNotes(3, 'Current Country:', this.value)">
+        </div>
+	
+	<div class="form-group">
+            <input type="number" id="age" name="age" placeholder="Your Age " required oninput="updateNotes(6, 'Age:', this.value)">
+        </div>
+
+        <div class="form-group">
+            <select id="gender" name="gender" required oninput="updateNotes(7, 'Gender:', this.value)">
+                <option value="Male"> Male </option>
+                <option value="Female"> Female </option>
+            </select>
+        </div>
+
+
+        <div class="form-group">
+	<label for="price-list">Select a Country:</label>
+            <select id="product" name="product" required oninput="updateNotes(4, 'Country:', this.value)">
+                <option value="Canada"> Canada </option>
+                <option value="United Kindom"> United Kongdom </option>
+                <option value="USA"> U.S.A </option>
+                <option value="Germany"> Germany </option>
+                <option value="Finland"> Finland </option>
+		<option value="France"> France </option>
+		<option value="Switzerland"> Switzerland </option>
+            </select>
+        </div>
+
+        <div class="form-group">
+<label for="price-list">Jobs Available:</label>
+            <select id="payment-method" name="payment-method" required oninput="updateNotes(5, 'Job ID:', this.value)">
+<option value="JOBA1">Dish Washer</option>
+<option value="JOBA2">House Help</option>
+<option value="JOBA3">Fast Food Worker</option>
+<option value="JOBA4">Cleaner</option>
+<option value="JOBA5">Construction Laborer</option>
+<option value="JOBA6">Warehouse Worker</option>
+<option value="JOBA7">Delivery Driver</option>
+<option value="JOBA8">General Laborer</option>
+<option value="JOBA9">Farm Worker</option>
+<option value="JOBA10">Caretaker</option>
+<option value="JOBA11">Retail Store Assistant</option>
+<option value="JOBA12">Hotel workers</option>
+<option value="JOBA13">Landscaping Worker</option>
+<option value="JOBA14">Factory Worker</option>
+<option value="JOBA15">Kitchen Assistant</option>
+<option value="JOBA16">Security Guard</option>
+<option value="JOBA17">Fruit Picker</option>
+<option value="JOBA18">Garbage Collector</option>
+<option value="JOBA19">Grocery Store Clerk</option>
+<option value="JOBA20">Hotel Porter</option>
+<option value="JOBA21">Cook</option>
+<option value="JOBA22">Laundry Attendant</option>
+<option value="JOBA23">Cashier</option>
+<option value="JOBA24">Maintenance Worker</option>
+<option value="JOBA25">Nursery Worker</option>
+<option value="JOBA26">Office Cleaner</option>
+<option value="JOBA27">Parking Lot Attendant</option>
+<option value="JOBA28">Packer</option>
+<option value="JOBA29">Painter Helper</option>
+<option value="JOBA30">Pet Caretaker</option>
+<option value="JOBA31">Production Line Worker</option>
+<option value="JOBA32">Restaurant Busser</option>
+<option value="JOBA33">Stock Clerk</option>
+<option value="JOBA34">Taxi Driver</option>
+<option value="JOBA35">Toll Booth Operator</option>
+<option value="JOBA36">Valet Parking Attendant</option>
+<option value="JOBA37">Waitstaff</option>
+<option value="JOBA38">Farmhand</option>
+<option value="JOBA39">Call Center Agent</option>
+<option value="JOBA40">Car Wash Attendant</option>
+<option value="JOBA41">Groundskeeper</option>
+<option value="JOBA42">Home Care Worker</option>
+<option value="JOBA43">Lumber Yard Worker</option>
+<option value="JOBA44">Newspaper Delivery Person</option>
+<option value="JOBA45">Pizza Delivery Driver</option>
+<option value="JOBA46">Dishwashing</option>
+<option value="JOBA47">Parking Attendant</option>
+<option value="JOBA48">Nurse</option>
+<option value="JOBA49">Factory Packer</option>
+<option value="JOBA50">Sales Girl</option>
+
+            </select>
+        </div>
+	<button type="submit" class="whatsapp-btn" onclick="generateWhatsAppLink()">📋 Submit Application</button>
+    </form>
+	</div>
+	</div>
+	
+        <div class="faq01">
+	<h3>FAQ - Frequently Asked Questions</h3>	
+	<table>
+	<tbody>
+	<tr>
+            <td class="question" onclick="toggleAnswer(this)" style="color: red;">
+                <span class="plus-minus"></span>
+                <b>What is the Procedure?</b>
+            </td>
+        </tr>
+	<tr class="answer">
+            <td>
+                <ol>
+    <li><strong>Client Application:</strong> The process begins when the client fills and submits the application form above.</li>
+    <li><strong>NHD Form:</strong> Upon submission the client recieves the link to get the NHD Forms ($19) to fill and complete thier application.</li>
+    <li><strong>Job Contract:</strong> The Agency secures a Job for the applicant in one of it partner companies within 1 month and sends the contract to the client for signature.</li>
+    <li><strong>Visa Sponsorship:</strong> The agency secures a fully sponsored visa for the client.</li>
+    <li><strong>Travel Arrangements and Bills:</strong> The agency handles all travel arrangements and Bills, including flights tickets.</li>
+    <li><strong>Arrival:</strong> Upon arrival, the client is recieved at the Airport and droven to thier accomodation. The client is given 2 weeks to rest and addapt then resume work the following week</li>
+    </ol>
+            </td>
+        </tr>
+        <tr>
+            <td class="question" onclick="toggleAnswer(this)" style="color: red;">
+                <span class="plus-minus"></span>
+                <b>How much will i spend in Total, is there any extra cost?</b>
+            </td>
+        </tr>
+        <tr class="answer">
+            <td>
+                <b>No Extra cost! </b>The only payment you will make is for the NHD forms. That is $19 for individal sponsorship.
+            </td>
+        </tr>
+        <tr>
+            <td class="question" onclick="toggleAnswer(this)" style="color: red;">
+                <span class="plus-minus"></span>
+                <b>How Long Does the whole process take?</b>
+            </td>
+        </tr>
+        <tr class="answer">
+            <td>
+                <b>3 Months</b> Within the first month we deliver you the employment contract after which we proceed to visa procedures.
+            </td>
+        </tr>
+	
+	<tr>
+            <td class="question" onclick="toggleAnswer(this)" style="color: red;">
+                <span class="plus-minus"></span>
+                <b>How Do i get the NHD forms required?</b>
+            </td>
+        </tr>
+        <tr class="answer">
+            <td>
+                Once you fill and submit the application form above, you will be sent a link and directed by one of our agents on how to get the documentation form from your country and how to fill and submit the forms.
+            </td>
+        </tr>
+
+        <!-- Add more rows as needed -->
+    	</tbody>
+	</table>
+
+	<p><b>For Any Other Questions, Email Us at <br><span style="color: blue;"><a href="mailto:globaltravelsponsorship.uk@gmail.com">globaltravelsponsorship.uk@gmail.com</a></span></b></p>
+	</div>
+
+
+</section>
+
+    <section id="testimonials" style="display: none;">
+
+	<div class="mid-topic">
+	<h1>Testimonials</h1>
+        </div>
+        
+	<div class="testi-container">
+	
+	<div class="review">
+            <p><b>Onyeka Mokone</b><br>From: <b>Nigeria</b><br>
+            <span style="color: orange;"><b>★★★★★</b></span><br><br>
+            One month already in the UK, Smooth process</p>
+        </div>
+
+        <div class="review">
+            <p><b>Jean-Luc Madiba</b><br>From: <b>Cameroon</b><br>
+            <span style="color: orange;"><b>★★★★</b></span><br><br>
+            I now live and work in New Orleans, USA all thanks to global travel sponsorship. Initially i was skeptical but still decided to go ahead and there is no hidden cost.</p>
+	</div>
+
+	<div class="review">
+            <p><b>Oluwaseyi Munyaneza</b><br>From: <b>Nigeria</b><br>
+            <span style="color: orange;"><b>★★★★★</b></span><br><br>
+            Securing a sponsorship opportunity for Switzerland was the best thing that ever happened to my family and i. A true blessing, forever gratefull to Global travel</p>
+	</div>	
+
+	<div class="review">
+            <p><b>Dumisani Uwamahoro</b><br>From: <b>South Africa</b><br>
+            <span style="color: orange;"><b>★★★★★</b></span><br><br>
+            The whole process was smooth, took like 3 months in total. I recieved a free work visa, my ticket was paid and beyond my expectations i was given a small appartment. I will start work by monday.</p>
+        </div>
+
+	<div class="review">
+            <p><b>Thabo Nkunda</b><br>From: <b>Rwanda</b><br>
+            <span style="color: orange;"><b>★★★★★</b></span><br><br>
+            Thank You 😊</p>
+        </div>
+	 
+	<div class="review">
+            <p><b>Ayodele Mokwena</b><br>From: <b>Nigeria</b><br>
+            <span style="color: orange;"><b>★★★★★</b></span><br><br>
+            new location with my husband and two children, Bristol, UK. They paid for everything </p>
+        </div>
+
+	<div class="review">
+            <p><b>Chioma Mutesi</b><br>From: <b>Nigeria</b><br>
+            <span style="color: orange;"><b>★★★★★</b></span><br><br>
+            I recieved my confirmation email already, with a date and appointment, just praying everything goes well</p>
+        </div>
+
+	<div class="review">
+            <p><b>Lerato Uwase</b><br>From: <b>South Africa</b><br>
+            <span style="color: orange;"><b>★★★★★</b></span><br><br>
+            My Family and i will forever be gratefull. 4 of us were sponsored</p>
+        </div>
+	
+
+        <!-- Add more reviews as needed -->
+
+    </div>
+
+    </section>
+
+    <section id="partner" style="display: none;">
+
+	<div class="mid-topic">
+	<h1>Travel Agent Partnership</h1>
+       	</div>
+        
+	<div class="container-partner">
+	
+	<p><b>We require our partners to be able to provide quality services to clients, including<br>Transparency, Integrity, and Professionalism.<br><br>
+Contact Us via Email<b>
+
+<br><span style="color: blue;"><a href="mailto:globaltravelsponsorship.uk@gmail.com">globaltravelsponsorship.uk@gmail.com</a></span></p>
+    </div>
+    </section>
+
+<div class="end-page">
+<h3>Global Travel UK</h3>
+<p>Head Office 📍: The Broadway, Crowborough, East Sussex, TN6 1BX | UK<br><br>
+We are Accredited for the services we offer with Tax Number: VAT Number 724988194. We work with hundreds of partners for Job Placements and full travel Sponsorship.</p>
+</div>
+
+
+<footer> &copy; 2020 - 2024 Global Travel | All rights reserved. </footer>
+
+
+<script src="https://sheetdb.io/handlebars.js"></script>
+
+<script>
+
+	//used for working faqs
+        function toggleAnswer(element) {
+        const answerRow = element.parentNode.nextElementSibling;
+        const plusMinus = element.querySelector('.plus-minus');
+
+        if (answerRow.style.display === 'table-row') {
+            answerRow.style.display = 'none';
+            plusMinus.classList.remove('minus');
+        } else {
+            answerRow.style.display = 'table-row';
+            plusMinus.classList.add('minus');
+        }
+    }
+	
+
+function generateWhatsAppLink() {
+    // Retrieve the entered information
+    
+const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const whatsapp = document.getElementById('whatsapp').value;
+    const country = document.getElementById('delivery-address').value;
+    const selectedCountry = document.getElementById('product').value;
+    const jobId = document.getElementById('payment-method').value;
+    const age = document.getElementById('age').value;
+    const gender = document.getElementById('gender').value;
+
+
+    // Check if all required fields are filled
+    if (!name || !email || !whatsapp || !country || !age || !selectedCountry || !jobId) {
+        alert('Please fill in all required fields.');
+        return;
+    }
+
+    // Construct the message
+    const message = `Name: ${name}\nAge: ${age}\nGender: ${gender}\nEmail: ${email}\nWhatsApp: ${whatsapp}\nCurrent Country: ${country}\nSelected Country: ${selectedCountry}\nJob ID: ${jobId}`;
+
+    //Get the phone number from the content of the .tel class and Construct the WhatsApp link
+    const phoneNumber = document.querySelector(".tel p").textContent.trim();
+    const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+    // Open the WhatsApp link in a new tab
+    window.open(whatsappLink, "_blank");
+}
+
+
+    function showSection(sectionId) {
+       // Hide all sections
+       document.querySelectorAll('section').forEach(section => {
+              section.style.display = 'none';
+             });
+ 
+            // Show the selected section
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+
+</script>
+
+</body>
+</html>
